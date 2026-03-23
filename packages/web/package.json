@@ -1,0 +1,14 @@
+{
+  "name": "@mcpman/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP Configuration Manager — Web UI",
+  "scripts": {
+    "dev": "echo 'Web UI not yet implemented'",
+    "build": "echo 'Web UI not yet implemented'"
+  },
+  "dependencies": {
+    "@mcpman/core": "*"
+  },
+  "license": "MIT"
+}

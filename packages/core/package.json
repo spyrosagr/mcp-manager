@@ -1,0 +1,28 @@
+{
+  "name": "@mcpman/core",
+  "version": "0.1.0",
+  "description": "MCP Configuration Manager — Core Engine",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "diff": "^5.2.0",
+    "dotenv": "^16.4.0",
+    "glob": "^10.3.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/diff": "^5.2.0",
+    "tsup": "^8.0.0",
+    "vitest": "^1.4.0"
+  },
+  "license": "MIT"
+}
