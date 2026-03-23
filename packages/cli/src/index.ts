@@ -11,6 +11,8 @@ import { importCommand } from './commands/import.js';
 import { doctorCommand } from './commands/doctor.js';
 import { configCommand } from './commands/config.js';
 import { profileCommand } from './commands/profile.js';
+import { healthCommand } from './commands/health.js';
+import { auditCommand } from './commands/audit.js';
 
 const program = new Command();
 
@@ -29,6 +31,8 @@ program.addCommand(importCommand);
 program.addCommand(doctorCommand);
 program.addCommand(configCommand);
 program.addCommand(profileCommand);
+program.addCommand(healthCommand);
+program.addCommand(auditCommand);
 
 // Enable/disable shortcuts
 program

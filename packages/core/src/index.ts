@@ -19,3 +19,13 @@ export { importFromClient, importFromFile } from './inventory/import.js';
 export * from './exporter/types.js';
 export { ConfigExporter } from './exporter/exporter.js';
 export { McpmanConfig } from './config.js';
+
+// Health
+export * from './health/types.js';
+export { HealthChecker } from './health/checker.js';
+export { probeStdio } from './health/stdio-probe.js';
+export { probeHttp } from './health/http-probe.js';
+
+// Security
+export * from './security/types.js';
+export { SecurityAuditor } from './security/auditor.js';
