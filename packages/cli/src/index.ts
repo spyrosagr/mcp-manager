@@ -13,6 +13,7 @@ import { configCommand } from './commands/config.js';
 import { profileCommand } from './commands/profile.js';
 import { healthCommand } from './commands/health.js';
 import { auditCommand } from './commands/audit.js';
+import { registryCommand } from './commands/registry.js';
 
 const program = new Command();
 
@@ -33,6 +34,7 @@ program.addCommand(configCommand);
 program.addCommand(profileCommand);
 program.addCommand(healthCommand);
 program.addCommand(auditCommand);
+program.addCommand(registryCommand);
 
 // Enable/disable shortcuts
 program

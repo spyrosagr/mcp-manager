@@ -1,0 +1,136 @@
+[
+  {
+    "name": "github",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-github"],
+    "envVars": { "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_example" },
+    "source": "manual",
+    "enabled": true,
+    "tags": ["vcs", "github"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true },
+      { "client": "cursor", "enabled": true },
+      { "client": "vscode", "enabled": true }
+    ]
+  },
+  {
+    "name": "postgres",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost:5432/mydb"],
+    "source": "manual",
+    "enabled": true,
+    "tags": ["database", "sql"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true },
+      { "client": "cursor", "enabled": true }
+    ]
+  },
+  {
+    "name": "filesystem",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/user/documents"],
+    "source": "manual",
+    "enabled": true,
+    "tags": ["filesystem"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true }
+    ]
+  },
+  {
+    "name": "memory",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-memory"],
+    "source": "manual",
+    "enabled": true,
+    "tags": ["memory", "knowledge-graph"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true },
+      { "client": "cursor", "enabled": true },
+      { "client": "vscode", "enabled": true }
+    ]
+  },
+  {
+    "name": "brave-search",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+    "envVars": { "BRAVE_API_KEY": "BSA_example" },
+    "source": "manual",
+    "enabled": true,
+    "tags": ["search", "web"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true },
+      { "client": "cursor", "enabled": true }
+    ]
+  },
+  {
+    "name": "slack",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-slack"],
+    "envVars": { "SLACK_BOT_TOKEN": "xoxb-test", "SLACK_TEAM_ID": "T1234567" },
+    "source": "manual",
+    "enabled": true,
+    "tags": ["communication", "slack"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true }
+    ]
+  },
+  {
+    "name": "supabase-remote",
+    "transport": "sse",
+    "url": "https://mcp.supabase.com/sse",
+    "headers": { "Authorization": "Bearer supabase-token" },
+    "source": "manual",
+    "enabled": true,
+    "tags": ["database", "cloud"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true },
+      { "client": "cursor", "enabled": true }
+    ]
+  },
+  {
+    "name": "staging-api",
+    "transport": "sse",
+    "url": "http://staging.example.com:3001/sse",
+    "source": "manual",
+    "enabled": false,
+    "tags": ["staging", "internal"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true }
+    ]
+  },
+  {
+    "name": "docker-tools",
+    "transport": "stdio",
+    "command": "docker",
+    "args": ["run", "-i", "--rm", "mcp/tools:latest"],
+    "source": "registry",
+    "registryId": "io.github.user/docker-tools",
+    "enabled": true,
+    "tags": ["docker", "tools"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true },
+      { "client": "cursor", "enabled": true },
+      { "client": "vscode", "enabled": true }
+    ]
+  },
+  {
+    "name": "python-analyzer",
+    "transport": "stdio",
+    "command": "uvx",
+    "args": ["mcp-python-analyzer"],
+    "source": "registry",
+    "registryId": "io.github.user/python-analyzer",
+    "enabled": true,
+    "tags": ["python", "analysis"],
+    "clients": [
+      { "client": "claude-desktop", "enabled": true },
+      { "client": "cursor", "enabled": true }
+    ]
+  }
+]

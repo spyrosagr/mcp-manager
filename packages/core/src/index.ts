@@ -29,3 +29,8 @@ export { probeHttp } from './health/http-probe.js';
 // Security
 export * from './security/types.js';
 export { SecurityAuditor } from './security/auditor.js';
+
+// Registry
+export * from './registry/types.js';
+export { RegistryClient } from './registry/client.js';
+export { RegistryCache } from './registry/cache.js';
